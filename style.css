@@ -1,0 +1,337 @@
+
+/* ========================================
+   1. CONFIGURAÇÕES GERAIS
+======================================== */
+
+:root {
+    --fundo: #0d0d12;
+    --superficie: #171720;
+    --superficie-hover: #20202c;
+    --roxo: #a78bfa;
+    --roxo-escuro: #3aedd5;
+    --texto: #f3f0ff;
+    --texto-secundario: #b7b4c7;
+    --borda: #302b40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   2. TÍTULOS E TEXTOS
+======================================== */
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+}
+
+h1 {
+    margin-bottom: 8px;
+    color: var(--roxo);
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: -1px;
+}
+
+h2 {
+    margin-bottom: 24px;
+    color: var(--roxo);
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: var(--texto);
+    font-size: 1.2rem;
+}
+
+p {
+    color: var(--texto-secundario);
+}
+
+a {
+    color: var(--roxo);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d8c8ff;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--roxo);
+    outline-offset: 5px;
+}
+
+/* ========================================
+   3. CABEÇALHO E MENU
+======================================== */
+
+header {
+    padding: 30px 8%;
+    background-color: #111117;
+    border-bottom: 1px solid var(--borda);
+    text-align: center;
+}
+
+header > p {
+    margin-top: 0;
+    font-size: 1.05rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+nav a {
+    padding: 9px 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: var(--texto-secundario);
+}
+
+nav a:hover {
+    background-color: var(--superficie);
+    border-color: var(--borda);
+    color: var(--roxo);
+}
+
+/* ========================================
+   4. CONTEÚDO PRINCIPAL
+======================================== */
+
+main {
+    width: min(1100px, 84%);
+    margin: 0 auto;
+}
+
+section {
+    padding: 65px 0;
+    border-bottom: 1px solid var(--borda);
+    scroll-margin-top: 20px;
+}
+
+/* ========================================
+   5. APRESENTAÇÃO INICIAL
+======================================== */
+
+#inicio {
+    min-height: 340px;
+    text-align: center;
+}
+
+#inicio > img {
+    display: block;
+    width: 190px;
+    height: 190px;
+    margin: 0 auto 25px;
+    border: 3px solid var(--roxo-escuro);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#inicio h2 {
+    margin-bottom: 12px;
+    color: var(--texto);
+    font-size: 1.7rem;
+}
+
+#inicio p {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   6. SOBRE MIM
+======================================== */
+
+#sobre p {
+    max-width: 800px;
+    font-size: 1.05rem;
+}
+
+/* ========================================
+   7. HABILIDADES
+======================================== */
+
+#habilidades ul {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(140px, 1fr)
+    );
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#habilidades li {
+    display: flex;
+    min-height: 125px;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background-color: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    color: var(--texto);
+    text-align: center;
+}
+
+#habilidades li:hover {
+    background-color: var(--superficie-hover);
+    border-color: var(--roxo-escuro);
+}
+
+#habilidades li img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+/* ========================================
+   8. PROJETOS
+======================================== */
+
+#projetos {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(240px, 1fr)
+    );
+    gap: 20px;
+}
+
+#projetos > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+#projetos article {
+    padding: 24px;
+    background-color: var(--superficie);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+}
+
+#projetos article:hover {
+    background-color: var(--superficie-hover);
+    border-color: var(--roxo-escuro);
+}
+
+#projetos article h3 {
+    margin-top: 0;
+}
+
+#projetos article p {
+    margin-bottom: 0;
+}
+
+/* ========================================
+   9. REDES SOCIAIS E CONTATO
+======================================== */
+
+#contato > a {
+    display: inline-block;
+    margin: 8px 8px 0 0;
+    padding: 10px 20px;
+    background-color: var(--superficie);
+    border: 1px solid var(--roxo-escuro);
+    border-radius: 8px;
+    color: var(--roxo);
+}
+
+#contato > a:hover {
+    background-color: var(--roxo-escuro);
+    color: #ffffff;
+}
+
+/* ========================================
+   10. RODAPÉ
+======================================== */
+
+footer {
+    padding: 25px 8%;
+    background-color: #111117;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   11. ADAPTAÇÃO PARA CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+    header {
+        padding: 25px 5%;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    section {
+        padding: 45px 0;
+    }
+
+    h2 {
+        font-size: 1.55rem;
+    }
+
+    #inicio > img {
+        width: 155px;
+        height: 155px;
+    }
+
+    #habilidades ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    #habilidades li {
+        min-height: 105px;
+        padding: 12px;
+    }
+
+    #projetos {
+        grid-template-columns: 1fr;
+    }
+
+    #projetos article {
+        padding: 20px;
+    }
+}
